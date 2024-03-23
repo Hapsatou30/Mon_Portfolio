@@ -7,6 +7,16 @@
     --text-black-900: #302e4d;
     --text-black-700:#504e70;
 }
+body.dark
+{
+    
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900: #ffffff;
+    --text-black-700:#e9e9e9; 
+    
+}
 
 body
 {
@@ -261,16 +271,19 @@ ul
     min-height: 100vh;
     display: flex;
     color: var(--text  -black-900);
-}*
+   
+}
 .home .home-info
 {
     flex: 0 0 60%;
     max-width: 60%;
+    margin-top: 120px;
 }
 h3.hello
 {
     font-size: 28px;
     margin: 15px 0;
+    color: var(--text-black-900);
 
 }
 h3.hello span
@@ -284,6 +297,7 @@ h3.my-profession
 {
     font-size: 30px;
     margin: 15px 0;
+    color: var(--text-black-900);
 }
 .typing
 {
@@ -300,6 +314,7 @@ h3.my-profession
    max-width: 40%; 
    text-align: center;
    position: relative;
+   margin-top: 120px;
 }
 .home .home-img::after
 {
@@ -618,6 +633,10 @@ h3.my-profession
 .contact .contact-info-item .icon .fa, .fab
 {
     font-size: 25px;
+    color: var(--skin-color);
+}
+.contact .contact-info-item p a:hover
+{
     color: var(--skin-color);
 }
 .contact .contact-info-item h4
