@@ -261,6 +261,10 @@ ul
 {
     color: var(--skin-color);
 }
+.aside .nav li a:hover
+{
+    color: var(--skin-color);
+}
 .aside .nav li a i
 {
     margin-right: 15px;

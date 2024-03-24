@@ -71,8 +71,8 @@
                         <div class="about-content padd-15">
                             <div class="row">
                                 <div class="about-text padd-15">
-                                    <h3> Je suis Hapsatou et je suis <span>Developpeur</span></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur error, saepe adipisci, alias eveniet incidunt provident voluptatibus veritatis natus, facilis quis repellat dolor earum laudantium nulla id rerum voluptate.</p>
+                                    <h3> Je suis Hapsatou, une apprenante passionnée de <span> Développement Web</span></h3>
+                                    <p>Ce que j'apprécie le plus dans le développement web, c'est la capacité à créer des expériences interactives et intuitives pour les utilisateurs. J'aime transformer des concepts abstraits en produits concrets et fonctionnels, en mettant l'accent sur l'esthétique, la convivialité et la performance.</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -137,39 +137,31 @@
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2021 - 2023
+                                                        <i class="fa fa-calendar"></i>10/2023 - jusqu'a nos jours
                                                     </h3>
-                                                    <h4 class="timeline-title">Licence en Génie Logiciel</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam optio atque iusto natus consectetur deserunt sint impedit, non quibusdam velit quia laborum quaerat labore!
-                                                    </p>
+                                                    <h4 class="timeline-title">Certificat en Dev-Web & Web-Mobile à SIMPLON</h4>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2021 - 2023
+                                                        <i class="fa fa-calendar"></i>03/2021 - 08/2023
                                                     </h3>
-                                                    <h4 class="timeline-title">Licence en Génie Logiciel</h4>
+                                                    <h4 class="timeline-title">Licence en Génie Logiciel à l'UIDT</h4>
                                                     <p class="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam optio atque iusto natus consectetur deserunt sint impedit, non quibusdam velit quia laborum quaerat labore!
-                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2021 - 2023
+                                                        <i class="fa fa-calendar"></i>2019 -2020
                                                     </h3>
-                                                    <h4 class="timeline-title">Licence en Génie Logiciel</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam optio atque iusto natus consectetur deserunt sint impedit, non quibusdam velit quia laborum quaerat labore!
-                                                    </p>
+                                                    <h4 class="timeline-title">Baccalauréat Série S2</h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
+                                    <h3 class="title">Experiences</h3>
                                     <div class="row">
                                         <div class="timeline-box">
                                             <div class="timeline   shadow-dark">
@@ -472,6 +464,20 @@
     <!--style switcher end-->
      <!--les fichiers js-->
     <script src="style-switcher.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!--pour activer le nav-->
+    <script>
+        $(document).ready(function(){
+            // Lorsque vous cliquez sur un lien
+            $('.nav a').click(function(){
+                // Supprimer la classe 'active' de tous les liens
+                $('.nav a').removeClass('active');
+                // Ajouter la classe 'active' au lien cliqué
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
 
 </body>
 </html>
