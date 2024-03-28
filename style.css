@@ -318,7 +318,7 @@ h3.my-profession
    max-width: 40%; 
    text-align: center;
    position: relative;
-   margin-top: 120px;
+   margin-top: 90px;
 }
 .home .home-img::after
 {
@@ -339,8 +339,8 @@ h3.my-profession
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
+    left: 20px;
+    top: 50px;
 }
 .home .home-img img
 {
