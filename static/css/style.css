@@ -277,7 +277,9 @@ h3.my-profession {
   text-align: center;
   position: relative;
   margin-top: 90px;
+  overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas du conteneur */
 }
+
 .home .home-img::after {
   content: "";
   position: absolute;
@@ -286,8 +288,9 @@ h3.my-profession {
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
   right: 20px;
-  bottom: -40px;
+  bottom: 10px;
 }
+
 .home .home-img::before {
   content: "";
   position: absolute;
@@ -298,11 +301,33 @@ h3.my-profession {
   left: 20px;
   top: 50px;
 }
+
 .home .home-img img {
   height: 400px;
   margin: auto;
   border-radius: 5px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transition pour l'agrandissement et l'ombre */
 }
+
+/* Effet d'agrandissement et d'ombre au survol */
+.home .home-img:hover img {
+  transform: scale(1.1); /* Agrandissement de l'image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre portée */
+}
+
+/* Animation de bordures colorées au survol */
+.home .home-img::after, .home .home-img::before {
+  transition: border-color 0.5s ease;
+}
+
+.home .home-img:hover::after {
+  border-color: black; /* Couleur de bordure au survol */
+}
+
+.home .home-img:hover::before {
+  border-color: black; /* Couleur de bordure au survol */
+}
+
 /*about*/
 .about .about-content {
   flex: 0 0 100%;
@@ -396,12 +421,14 @@ h3.my-profession {
   border-radius: 10px;
   border: 1px solid var(--bg-black-50);
   width: 100%;
+  height: 500px;
   position: relative;
 }
 .about .about-content .timeline .timeline-item {
   position: relative;
   padding-left: 37px;
   padding-bottom: 50px;
+
 }
 .about .about-content .timeline .timeline-item:last-child {
   padding-bottom: O;
@@ -429,20 +456,24 @@ h3.my-profession {
   font-size: 14px;
   margin-bottom: 12px;
   color: var(--text-black-700);
+
+}
+.about .about-content .timeline .timeline-date a{
+  color: var(--skin-color);
 }
 .about .about-content .timeline .timeline-date .fa {
   margin-right: 5px;
 }
 .about .about-content .timeline .timeline-title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
   text-transform: capitalize;
   color: var(--text-black-900);
 }
 .about .about-content .timeline .timeline-text {
-  line-height: 25px;
-  font-size: 16px;
+  line-height: 20px;
+  font-size: 14px;
   text-align: justify;
   color: var(--text-black-700);
 }
@@ -451,6 +482,7 @@ h3.my-profession {
   margin-bottom: 30px;
   flex: 0 0 33.33%;
   max-width: 33.33%;
+
 }
 .service .service-item .service-item-inner {
   background-color: var(--bg-black-100);
@@ -459,6 +491,7 @@ h3.my-profession {
   padding: 30px 15px;
   text-align: center;
   transition: all 0.3s ease;
+  height: 500px;
 }
 .service .service-item .service-item-inner:hover {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
@@ -493,7 +526,7 @@ h3.my-profession {
   text-transform: capitalize;
 }
 .service .service-item .service-item-inner p {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--text-black-700);
   line-height: 25px;
 }
@@ -521,9 +554,55 @@ h3.my-profession {
   overflow: hidden;
   cursor: pointer;
 }
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img a {
+  display: block;
+  position: relative;
+}
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
+  height: 300px;
   display: block;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.portfolio-img a::before {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.portfolio-img a:hover::before {
+  opacity: 1;
+}
+
+.portfolio-img a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.portfolio-img .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--skin-color);
+  background-color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+.portfolio-img a:hover .overlay {
+  opacity: 1;
 }
 /*CONTACT*/
 .contact-title {
@@ -608,6 +687,17 @@ h3.my-profession {
 
 /*responsivité*/
 @media (max-width: 1199px) {
+  /* Menu burger */
+  .nav-toggler {
+    font-size: 30px;
+    display: block; /* Assurez-vous que le menu burger est visible */
+    position: fixed;
+    left: 20px; /* Ajustez la position selon vos besoins */
+    top: 20px; /* Ajustez la position selon vos besoins */
+    z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments */
+    cursor: pointer; /* Ajoutez un curseur pour indiquer qu'il est cliquable */
+  }
+
   .aside {
     left: -270px;
   }
@@ -619,7 +709,75 @@ h3.my-profession {
     margin-left: 0;
   }
 }
+
 @media (max-width: 991px) {
+   /* Menu burger */
+   .nav-toggler {
+    
+      display: block; /* Afficher le menu burger */
+      position: fixed;
+      left: 20px; /* Ajuster la position selon vos besoins */
+      top: 20px; /* Ajuster la position selon vos besoins */
+      z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  }
+
+  .nav-toggler span {
+      display: block;
+      width: 25px;
+      height: 20px;
+      line-height: 40px;
+      background-color: var(--skin-color);
+      margin-bottom: 5px;
+      position: relative;
+      transition: background-color 0.3s ease;
+  }
+
+  .nav-toggler.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .nav-toggler.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .nav-toggler.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Afficher la navigation principale lorsqu'elle est ouverte */
+  .nav {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 270px;
+      height: 100%;
+      background-color: var(--bg-black-100);
+      padding: 30px;
+      border-right: 1px solid var(--bg-black-50);
+      z-index: 999; /* Assurez-vous qu'elle est au-dessus de l'aside */
+  }
+
+  .nav.active {
+      display: block;
+  }
+
+  /* Ajustements supplémentaires selon vos besoins */
+  .nav li {
+      margin-bottom: 20px;
+  }
+
+  .nav li a {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-black-900);
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .nav li a:hover {
+      color: var(--skin-color);
+  }
   .portfolio .portfolio-item,
   .service .service-item,
   .contact .contact-info-item {
@@ -637,7 +795,45 @@ h3.my-profession {
   .about .about-content .skills {
     margin-left: 50px;
   }
+
+  .about{
+    align-items: center;
+  }
+  .about .about-content .personal-info {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 40px;
+  }
+
+  .about .about-content .personal-info .info-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .about .about-content .personal-info .info-item p {
+      font-size: 14px; /* Réduire la taille de la police pour les écrans plus petits */
+      padding: 8px 0; /* Ajuster le padding pour une meilleure adaptation */
+  }
+
+  .about .about-content .personal-info .info-item p span {
+      margin-left: 2px; /* Ajuster l'espacement entre le texte et le span */
+  }
+
+  .about .about-content .personal-info .buttons {
+      margin-top: 20px; /* Réduire l'espace au-dessus des boutons */
+  }
+
+  .about .about-content .personal-info .buttons .btn {
+      margin-right: 10px; /* Réduire l'espacement entre les boutons */
+      margin-top: 8px;
+  }
+  .about .about-content .timeline {
+    
+    height: 100%;
+  }
 }
+
+
 @media (max-width: 767px) {
   .about .about-content .skills,
   .about .about-content .personal-info,
@@ -654,3 +850,5 @@ h3.my-profession {
     margin-left: 0;
   }
 }
+
+ 

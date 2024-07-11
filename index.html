@@ -38,7 +38,7 @@
                 <a href="#"> <span>H</span>apsatou</a>
             </div>
             <div class="nav-toggler">
-                <span></span>
+                <span><i class="fa fa-list"></i></span>
             </div>
             <ul class="nav">
                 <!--Les balises <i> sont utilisées pour afficher des icônes à côté du texte des liens,
@@ -50,6 +50,10 @@
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
+        </div>
+          <!-- Menu burger -->
+          <div class="nav-toggler" onclick="toggleMenu()">
+            <span></span>
         </div>
         <!--aside end-->
         <!--main content start-->
@@ -66,7 +70,7 @@
                             <a href="#contact" class="btn hire-me">Contactez-moi </a>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="./images/plus_bellee.png" alt="profile_image" />
+                            <img src="./images/image-removebg-preview.png" alt="profile_image" />
                         </div>
                     </div>
                 </div>
@@ -99,10 +103,10 @@
                                             <p>Anniver. : <span> 30 Avril 2001</span> </p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Age : <span>22</span> </p>
+                                            <p>Age : <span>23</span> </p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Adresse : <span> Liberté 6, Dakar</span> </p>
+                                            <p>Adresse : <span> Sacré Coeur 3, Dakar</span> </p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Telephone 1 : <span> 78 150 96 80</span> </p>
@@ -116,7 +120,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons">
-                                            <a href="./static/others/CV.pdf" class="btn" download> Télécharger CV </a>
+                                            <a href="./static/others/CV de Hapsatou.pdf" class="btn" download> Télécharger CV </a>
                                             <a href="#contact" class="btn hire-me">Contactez-moi </a>
                                         </div>
                                     </div>
@@ -133,7 +137,7 @@
                                             <img src="./images/PHP-logo.svg.png" alt="php_logo">
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <img src="./images/java1_0.png" alt="java_logo">
+                                            <img src="./images/figma.png" alt="figma_logo">
                                         </div>
                                         <div class="skill-item padd-15">
                                             <img src="./images/javascript1200x628.png" alt="javascript_logo">
@@ -189,27 +193,28 @@
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-globe"></i><a
-                                                            href="https://github.com/BounAbdallah/TAGGAT">TAGGAT</a>
+                                                            href="https://e-commerce-laravel.thiamhapstou.simplonfabriques.com/">Gestionnaire de Produits et Commandes <i class="fa fa-link"></i></a>
                                                     </h3>
-                                                    <h4 class="timeline-title">TAGGAT</h4>
+                                                    <h4 class="timeline-title">Gestionnaire de Produits et Commandes</h4>
                                                     <p class="timeline-text">
-                                                        TAGGAT, est une plateforme de coaching numérique conçue pour
-                                                        accompagner les jeunes diplômés et les professionnels en
-                                                        reconversion à travers leur voyage numérique.
+                                                        L'application a pour objectif de fournir un outil efficace et 
+                                                        intuitif pour gérer des produits alimentaires et des commandes. 
+                                                        Cette application permettra de centraliser et d'automatiser les
+                                                        processus de gestion des stocks et des commandes.
                                                     </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-globe"></i><a
-                                                            href="https://github.com/Hapsatou30/InnovatTech">BOITE À
-                                                            IDÉE</a>
+                                                            href="https://gestion-candidature.lomouhamedelbachir.simplonfabriques.com/">Gestion des Candidatures de Simplon <i class="fa fa-link"></i></a>
                                                     </h3>
-                                                    <h4 class="timeline-title">BOITE À IDÉE</h4>
+                                                    <h4 class="timeline-title">Gestion des Candidatures de Simplon</h4>
                                                     <p class="timeline-text">
-                                                        Cette application est une plateforme de boîte à idées
-                                                        collaborative, fun et conviviale, destinée à faciliter
-                                                        l'organisation de la vie collaborative.
+                                                        L'objectif est de développer une plateforme complète pour
+                                                         Simplon Sénégal, permettant la gestion centralisée et fluide
+                                                          des candidatures à ses formations, depuis la création de profil
+                                                           jusqu'à la notification des décisions.
                                                     </p>
                                                 </div>
                                             </div>
@@ -298,7 +303,12 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/simplon_senegal.png" alt="simplon_senegal_project">
+                                    <a href="https://e-commerce-laravel.thiamhapstou.simplonfabriques.com/" target="_blank">
+                                        <img src="./images/boutique.png" alt="simplon_senegal_project">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -307,7 +317,12 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/voyage_website.png" alt="voyage_website">
+                                    <a href="#" target="_blank">
+                                        <img src="./images/voyage_website.png" alt="voyage_website">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +331,12 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/innovate_tech.png" alt="innovate_tech">
+                                    <a href="#" target="_blank">
+                                        <img src="./images/innovate_tech.png" alt="innovate_tech">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -325,7 +345,12 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/gestion_des_employes.png" alt="site_de_gestion_des_employes">
+                                    <a href="https://gestion-candidature.lomouhamedelbachir.simplonfabriques.com/" target="_blank">
+                                        <img src="./images/simplon.png" alt="site_de_gestion_des_employes">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -334,7 +359,12 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/buildexo.png" alt="buildexo_website">
+                                    <a href="https://dev-briefsimplon.pantheonsite.io/" target="_blank">
+                                        <img src="./images/wordpress.png" alt="buildexo_website">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -343,12 +373,17 @@
                         <div class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./images/taggat.png" alt="taggat_website">
+                                    <a href="https://dev-kilifewordpress.pantheonsite.io/" target="_blank">
+                                        <img src="./images/barbershop.png" alt="taggat_website">
+                                        <div class="overlay">
+                                            <i class="fas fa-eye"></i>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <!--portfolio item end-->
-                    </div>
+                    </div>                    
                 </div>
             </section>
             <!--portfolio section end-->
@@ -378,7 +413,7 @@
                                 <i class="fa fa-map-marker-alt"></i>
                             </div>
                             <h4>Adresse:</h4>
-                            <p>Dakar - Liberté 6</p>
+                            <p>Dakar - Sacré coeur 3</p>
                         </div>
                         <!--contact item end-->
                         <!--contatc item start-->
@@ -487,7 +522,14 @@
                 });
             });
         });
+        function toggleMenu() {
+        var nav = document.querySelector('.nav');
+        nav.classList.toggle('active');
+    }
     </script>
+   
+    
+    
 </body>
 
 </html>
