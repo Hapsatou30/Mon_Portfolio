@@ -38,7 +38,7 @@
                 <a href="#"> <span>H</span>apsatou</a>
             </div>
             <div class="nav-toggler">
-                <span></span>
+                <span><i class="fa fa-list"></i></span>
             </div>
             <ul class="nav">
                 <!--Les balises <i> sont utilisées pour afficher des icônes à côté du texte des liens,
@@ -50,6 +50,10 @@
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
+        </div>
+          <!-- Menu burger -->
+          <div class="nav-toggler" onclick="toggleMenu()">
+            <span></span>
         </div>
         <!--aside end-->
         <!--main content start-->
@@ -518,7 +522,14 @@
                 });
             });
         });
+        function toggleMenu() {
+        var nav = document.querySelector('.nav');
+        nav.classList.toggle('active');
+    }
     </script>
+   
+    
+    
 </body>
 
 </html>
