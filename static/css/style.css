@@ -51,6 +51,7 @@ ul {
 }
 .main-content {
   padding-left: 270px;
+  margin-top: -2%;
 }
 .padd-15 {
   padding-left: 15px;
@@ -186,6 +187,7 @@ ul {
   display: none;
   align-items: center;
   justify-content: center;
+  
 }
 .aside .nav-toggler span {
   height: 2px;
@@ -237,8 +239,13 @@ ul {
   margin-right: 15px;
 }
 /*home*/
+.home1{
+  margin-top: -20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .home {
-  min-height: 100vh;
   display: flex;
   color: var(--text -black-900);
 }
@@ -329,6 +336,10 @@ h3.my-profession {
 }
 
 /*about*/
+.about{
+  margin-top: -20%;
+}
+
 .about .about-content {
   flex: 0 0 100%;
   max-width: 100%;
@@ -347,9 +358,10 @@ h3.my-profession {
   color: var(--skin-color);
 }
 .about .about-content .about-text p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   color: var(--text-black-700);
+  
 }
 .about .about-content .personal-info {
   flex: 0 0 50%;
@@ -396,8 +408,9 @@ h3.my-profession {
 }
 
 .about .about-content .skills .skill-item img {
-  width: 100px;
-  border-radius: 4px;
+  width: 80px;
+  height: 80px;
+  
 }
 .about .about-content .education,
 .about .about-content .experience {
