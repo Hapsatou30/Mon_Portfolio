@@ -724,6 +724,9 @@ h3.my-profession {
 }
 
 @media (max-width: 991px) {
+  body{
+    overflow-x: hidden;
+  }
    /* Menu burger */
    .nav-toggler {
     
@@ -791,6 +794,9 @@ h3.my-profession {
   .nav li a:hover {
       color: var(--skin-color);
   }
+  .main-content {
+    margin-top: -25%;
+  }
   .portfolio .portfolio-item,
   .service .service-item,
   .contact .contact-info-item {
@@ -804,10 +810,42 @@ h3.my-profession {
   .home .home-img {
     display: none;
   }
-
-  .about .about-content .skills {
-    margin-left: 50px;
+  .about{
+    margin-top: -40%;
   }
+  
+  .about .about-content .about-text p {
+    text-align: justify;
+    
+  }
+  .about .about-content .skills {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .about .about-content .skills .row {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Espace entre les éléments */
+    gap: 15px; /* Espacement entre les éléments */
+}
+
+.about .about-content .skills .row .skill-item {
+    flex: 0 0 calc(33.33% - 30px); /* 3 par ligne avec espacement inclus */
+    max-width: calc(33.33% - 30px); /* Largeur maximale */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    text-align: center; /* Centrer le contenu */
+}
+
+.about .about-content .skills .row .skill-item img {
+    width: 100%; /* S'adapte à la largeur de l'élément */
+    max-width: 100px; /* Taille maximale pour les logos */
+    height: auto; /* Maintient les proportions */
+    margin: 0 auto; /* Centre l'image */
+}
+
 
   .about{
     align-items: center;
@@ -824,8 +862,10 @@ h3.my-profession {
   }
 
   .about .about-content .personal-info .info-item p {
-      font-size: 14px; /* Réduire la taille de la police pour les écrans plus petits */
+      font-size: 18px; /* Réduire la taille de la police pour les écrans plus petits */
       padding: 8px 0; /* Ajuster le padding pour une meilleure adaptation */
+      display: flex;
+      align-items: center;
   }
 
   .about .about-content .personal-info .info-item p span {
@@ -833,21 +873,62 @@ h3.my-profession {
   }
 
   .about .about-content .personal-info .buttons {
+    flex: 0 0 100%;
+      max-width: 100%;
       margin-top: 20px; /* Réduire l'espace au-dessus des boutons */
+      display: flex;
+      justify-content: space-between; /* Aligner les boutons horizontalement */
   }
-
+  .about .about-content .skills {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  }
   .about .about-content .personal-info .buttons .btn {
       margin-right: 10px; /* Réduire l'espacement entre les boutons */
       margin-top: 8px;
   }
-  .about .about-content .timeline {
-    
-    height: 100%;
+ 
+}
+@media (max-width: 840px) {
+  .main-content {
+    margin-top: -30%;
   }
+  .about{
+    margin-top: -50%;
+  }
+  .about .about-content .timeline {
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-black-50);
+    width: 100%;
+    height: 550px;
+    position: relative;
+  }
+
+}
+@media (max-width: 800px) {
+  .main-content {
+    margin-top: -40%;
+  }
+  .about{
+    margin-top: -60%;
+  }
+  .about .about-content .timeline {
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-black-50);
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about .about-content .skills,
   .about .about-content .personal-info,
   .about .about-content .education,
@@ -862,6 +943,52 @@ h3.my-profession {
   .about .about-content .skills {
     margin-left: 0;
   }
+  .main-content {
+    margin-top: -26%;
+  }
+  .about{
+    margin-top: -45%;
+  }
+  .about .about-content .timeline {
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-black-50);
+    width: 100%;
+    height: 450px;
+    position: relative;
+  }
+  .service .service-item .service-item-inner {
+   
+    height: 350px;
+  }
+  
+
+}
+@media (max-width: 576px) {
+  .about .about-content .timeline {
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-black-50);
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+  .service .service-item .service-item-inner {
+   
+    height: 450px;
+  }
+  
+}
+@media (max-width: 400px) {
+  .main-content {
+    margin-top: -10%;
+  }
+  .about{
+    margin-top: -40%;
+  }
+  
 }
 
  
